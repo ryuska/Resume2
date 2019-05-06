@@ -3,13 +3,15 @@ package com.company;
 public class Personal {
     private String name;
     private String email;
+    private String phone;
 
     public Personal() {
     }
 
-    public Personal(String name, String email) {
+    public Personal(String name, String email, String phone) {
         this.name = name;
         this.email = email;
+        this.phone = phone;
     }
 
     public String getName() {
@@ -27,9 +29,19 @@ public class Personal {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     public void displayPersonal(){
         System.out.println(getName());
         System.out.println(getEmail());
+        System.out.println(getPhone());
         System.out.println();
     }
 }

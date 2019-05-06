@@ -9,7 +9,10 @@ public class Resume {
     ArrayList<Skills> skills = new ArrayList<>();
 
     public Resume() {
+
+        System.out.println("NEW RESUME");
     }
+
 
     public void displayResume() {
         for (Personal p : personalInfo) {
@@ -28,6 +31,7 @@ public class Resume {
             s.displaySkills();
         }
     }
+
 
     public ArrayList<String> displaySkills() {
         ArrayList<String> skillList = new ArrayList<>();
@@ -68,7 +72,18 @@ public class Resume {
     public void addSkills(Skills skl) {
         skills.add(skl);
     }
+
+//    public String getResume() {
+//        return "Resume" ;
+//    }
 }
+
+
+
+
+
+
+
 
 
 
