@@ -17,12 +17,12 @@ public class Main {
         String name = scanner.nextLine();
         System.out.println("Email: ");
         String email = scanner.nextLine();
-        System.out.println();
+        System.out.println("\n");
 
         resumeInfo = new Personal(name, email);
         a.addPersonalInfo(resumeInfo);
 
-        educationAdd = "";
+        educationAdd = " ";
         Education educations;
         System.out.println("Education");
         System.out.println("Degree type: ");
@@ -33,7 +33,8 @@ public class Main {
         String uniName = scanner.nextLine();
         System.out.println("Graduation year: ");
         String gradYear = scanner.nextLine();
-        scanner.nextLine();
+        System.out.println();
+
 
         educations = new Education(degree, major, uniName, gradYear);
         a.addEducations(educations);
@@ -51,36 +52,37 @@ public class Main {
         String endDate = scanner.nextLine();
         System.out.println("Job Description");
         experiences.addJobDescription(scanner.nextLine());
+        System.out.println();
 
         experiences.setCompany(company);
         experiences.setJobTitle(jobTytle);
         experiences.setStartDate(startDate);
         experiences.setEndDate(endDate);
-
         a.addExperiences(experiences);
-
 
         skillsAdd = "";
         Skills skills;
         System.out.println("Skills");
-        System.out.println("Skill Name: ");
-        String skillName = scanner.nextLine();
-        System.out.println("Competency Rating: ");
-        String skillCompetency = scanner.nextLine();
-
-        skills = new Skills(skillName, skillCompetency);
-        a.addSkills(skills);
-
-
-        System.out.println("Would you like to display your resume?: ");
-        displayResume = scanner.nextLine();
-        if (displayResume.equalsIgnoreCase("Y")){
-            a.displayResume();
+        for (int n = 0; n < 3; n++){
+            System.out.println("Skill Name: ");
+            String skillName = scanner.nextLine();
+            System.out.println("Competency Rating: ");
+            String skillCompetency = scanner.nextLine();
+            skills = new Skills(skillName, skillCompetency);
+            a.addSkills(skills);
         }
 
+
+            System.out.println("Would you like to display your resume?: ");
+            displayResume = scanner.nextLine();
+            if (displayResume.equalsIgnoreCase("Y")) {
+                a.displayResume();
+
+
+            }
+        }
     }
 
-}
 
 
 
