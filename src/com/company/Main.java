@@ -54,8 +54,12 @@ public class Main {
 
 
 
+        int d;
+        d = 0;
         Experience experiences = new Experience();
         System.out.println("Experience");
+
+        while (d == 0) {
         System.out.println("Company: ");
         String company = scanner.nextLine();
         System.out.println("Job Title: ");
@@ -73,6 +77,15 @@ public class Main {
         experiences.setStartDate(startDate);
         experiences.setEndDate(endDate);
         a.addExperiences(experiences);
+            System.out.println("Would you like to add experience info ? ");
+            String resp = scanner.nextLine();
+            if (resp.equalsIgnoreCase("y")) {
+                d = 0;
+                System.out.println("Additional experience information; ");
+            } else {
+                d = 1;
+            }
+        }
 
 
 
