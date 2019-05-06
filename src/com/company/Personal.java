@@ -30,5 +30,6 @@ public class Personal {
     public void displayPersonal(){
         System.out.println(getName());
         System.out.println(getEmail());
+        System.out.println();
     }
 }

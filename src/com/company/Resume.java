@@ -15,15 +15,15 @@ public class Resume {
         for (Personal p : personalInfo) {
             p.displayPersonal();
         }
-        System.out.println("Education");
+        System.out.println("EDUCATION");
         for (Education e : educations) {
             e.displayEducation();
         }
-        System.out.println("Experience");
+        System.out.println("EXPERIENCE");
         for (Experience e : experiences) {
             e.displayExperience();
         }
-        System.out.println("Skills");
+        System.out.println("SKILLS");
         for (Skills s : skills) {
             s.displaySkills();
         }
@@ -38,7 +38,6 @@ public class Resume {
     }
 
     public Personal getPersonalInfo(int i) {
-
         return personalInfo.get(i);
     }
 
@@ -67,7 +66,6 @@ public class Resume {
     }
 
     public void addSkills(Skills skl) {
-
         skills.add(skl);
     }
 }

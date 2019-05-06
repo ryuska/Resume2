@@ -17,7 +17,7 @@ public class Main {
         String name = scanner.nextLine();
         System.out.println("Email: ");
         String email = scanner.nextLine();
-        System.out.println("\n");
+        System.out.println();
 
         resumeInfo = new Personal(name, email);
         a.addPersonalInfo(resumeInfo);
@@ -34,7 +34,6 @@ public class Main {
         System.out.println("Graduation year: ");
         String gradYear = scanner.nextLine();
         System.out.println();
-
 
         educations = new Education(degree, major, uniName, gradYear);
         a.addEducations(educations);
@@ -60,6 +59,7 @@ public class Main {
         experiences.setEndDate(endDate);
         a.addExperiences(experiences);
 
+
         skillsAdd = "";
         Skills skills;
         System.out.println("Skills");
@@ -72,12 +72,10 @@ public class Main {
             a.addSkills(skills);
         }
 
-
-            System.out.println("Would you like to display your resume?: ");
-            displayResume = scanner.nextLine();
-            if (displayResume.equalsIgnoreCase("Y")) {
-                a.displayResume();
-
+        System.out.println("Would you like to display your resume?: ");
+        displayResume = scanner.nextLine();
+        if (displayResume.equalsIgnoreCase("Y")) {
+            a.displayResume();
 
             }
         }

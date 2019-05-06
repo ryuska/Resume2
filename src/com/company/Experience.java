@@ -66,6 +66,7 @@ public class Experience {
                 getStartDate() + " , " + getEndDate());
         for (String description : jobDescription) {
             System.out.println("- " + description);
+            System.out.println();
         }
     }
 }

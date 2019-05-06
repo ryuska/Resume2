@@ -28,7 +28,8 @@ public class Skills {
         this.skillCompetency = skillCompetency;
     }
 
-    public void displaySkills(){
+    public void displaySkills() {
         System.out.println(getSkillName() + " " + getSkillCompetency());
+
     }
 }
