@@ -5,9 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String educationAdd;
-        String experienceAdd;
-        String skillsAdd;
+
         String displayResume;
 
         Resume a = new Resume();
@@ -22,23 +20,40 @@ public class Main {
         resumeInfo = new Personal(name, email);
         a.addPersonalInfo(resumeInfo);
 
-        educationAdd = " ";
-        Education educations;
+
+
+        int v;
+        v =0;
         System.out.println("Education");
-        System.out.println("Degree type: ");
-        String degree = scanner.nextLine();
-        System.out.println("Major: ");
-        String major = scanner.nextLine();
-        System.out.println("University name: ");
-        String uniName = scanner.nextLine();
-        System.out.println("Graduation year: ");
-        String gradYear = scanner.nextLine();
-        System.out.println();
 
-        educations = new Education(degree, major, uniName, gradYear);
-        a.addEducations(educations);
+        Education educations;
+        while (v==0) {
 
-        experienceAdd = "";
+
+            System.out.println("Degree type: ");
+            String degree = scanner.nextLine();
+            System.out.println("Major: ");
+            String major = scanner.nextLine();
+            System.out.println("University name: ");
+            String uniName = scanner.nextLine();
+            System.out.println("Graduation year: ");
+            String gradYear = scanner.nextLine();
+            System.out.println();
+
+            educations = new Education(degree, major, uniName, gradYear);
+            a.addEducations(educations);
+            System.out.println("Would you like to add education info ? ");
+            String resp = scanner.nextLine();
+            if (resp.equalsIgnoreCase("y")) {
+                v = 0;
+                System.out.println("Additional education information; ");
+            } else {
+                v = 1;
+            }
+        }
+
+
+
         Experience experiences = new Experience();
         System.out.println("Experience");
         System.out.println("Company: ");
@@ -60,7 +75,7 @@ public class Main {
         a.addExperiences(experiences);
 
 
-        skillsAdd = "";
+
         Skills skills;
         System.out.println("Skills");
         for (int n = 0; n < 3; n++){
